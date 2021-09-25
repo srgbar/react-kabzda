@@ -9,7 +9,7 @@ type PropsAccordionTitle = {
     onClick: () => void
 }
 
-function UncontrolledAccordion(props:PropsAccordion) {
+export function UncontrolledAccordion(props:PropsAccordion) {
 
     let[collapsed, setCollapsed] = useState(true)
 
@@ -31,5 +31,3 @@ function AccordionBody() {
         <li>3</li>
     </ul>
 }
-
-export default UncontrolledAccordion;

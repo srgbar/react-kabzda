@@ -2,10 +2,10 @@ import React from "react";
 
 export type OnOffPropsType = {
     on: boolean
-    onSwitch: (on: boolean) => void
+    onChange: (on: boolean) => void
 }
 
-function OnOff (props: OnOffPropsType) {
+export function OnOff (props: OnOffPropsType) {
 
     const onStyle = {
         width: "30px",
@@ -35,10 +35,9 @@ function OnOff (props: OnOffPropsType) {
     };
 
     return <div>
-        <div style={onStyle} onClick={ () => { props.onSwitch(true) } }>ON</div>
-        <div style={offStyle} onClick={ () => { props.onSwitch(false) } }>OFF</div>
+        <div style={onStyle} onClick={ () => { props.onChange(true) } }>ON</div>
+        <div style={offStyle} onClick={ () => { props.onChange(false) } }>OFF</div>
         <div style={indicatorStyle}></div>
     </div>
 }
 
-export default OnOff
